@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FormedixFlickrImageSearchAppNgRx": {
+    "FlickrImageSearchAppNgRx": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/formedix-flickr-image-search-app-ng-rx",
+            "outputPath": "dist/-flickr-image-search-app-ng-rx",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/",
+              "src/assets/flickr.svg"
             ],
             "styles": [
               "src/styles.scss"
@@ -72,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FormedixFlickrImageSearchAppNgRx:build:production"
+              "browserTarget": "FlickrImageSearchAppNgRx:build:production"
             },
             "development": {
-              "browserTarget": "FormedixFlickrImageSearchAppNgRx:build:development"
+              "browserTarget": "FlickrImageSearchAppNgRx:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FormedixFlickrImageSearchAppNgRx:build"
+            "browserTarget": "FlickrImageSearchAppNgRx:build"
           }
         },
         "test": {
@@ -107,5 +108,5 @@
       }
     }
   },
-  "defaultProject": "FormedixFlickrImageSearchAppNgRx"
+  "defaultProject": "FlickrImageSearchAppNgRx"
 }

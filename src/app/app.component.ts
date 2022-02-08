@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'FormedixFlickrImageSearchAppNgRx';
+  title = ' Flickr Image Search App Test : Daminda Jayaratne';
 }

@@ -1,0 +1,32 @@
+<h2 class="flex flickr-header4" *ngIf="keyword$ | async">
+  showing images for {{ keyword$ | async }}
+</h2>
+
+
+
+  <div
+    class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="300"
+  >
+    <ul class="flickr-image-container" *ngIf="(isLoading$ | async) === false">
+      <li class="item" *ngFor="let item of searchresults$ | async">
+        <a href="{{ item.url }}_b.jpg" target="_blank">
+          <img src="{{ item.url }}_m.jpg" alt="" />
+          <h4>{{ item.title }}</h4>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div
+  class="search-results"
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="30"
+  (scrolled)="onScroll()"
+>
+<!-- <app-loading-spinner *ngIf="isLoading$ | async"></app-loading-spinner> -->
+
+</div>

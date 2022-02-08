@@ -1,0 +1,14 @@
+<input
+  type="text"
+  class="flickr-search-box"
+  (keyup.enter)="getSearchedImages(inputkeyword.value)"
+  placeholder="type to search images....."
+  #inputkeyword
+/>
+<button
+  class="flickr-search-button"
+  (click)="getSearchedImages(inputkeyword.value)"
+  *ngIf="(isLoading$ | async) === false"
+>
+  SEARCH
+</button>

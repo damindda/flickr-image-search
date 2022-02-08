@@ -1,4 +1,13 @@
-# FormedixFlickrImageSearchAppNgRx
+
+# Installation
+
+Do a
+- npm install
+- run "npm run start or ng serve" command after that
+- It should run in the default port 4200
+- navigate to http://localhost:4200/ it will open up.
+
+# FlickrImageSearchAppNgRx
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
