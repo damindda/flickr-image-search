@@ -15,8 +15,6 @@ export class FlickrImageSearchService {
 
   searchKeyword(keyword: string) {
     const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${environment.flickr.key}&tags=${keyword}&format=json&nojsoncallback=1&page=${this.count}&per_page=${this.count*100}`;
-
-    console.log(`count --- ${this.count}`);
     return this.http.get<FlickrOutput>(url).pipe(
       map((response: FlickrOutput) => {
         const urlarray: any = [];

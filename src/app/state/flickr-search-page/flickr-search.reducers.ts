@@ -23,7 +23,7 @@ export const flickrSearchReducer = createReducer(
   on(getFlickrImagesAction, (state) => ({...state, status: 'loading' })),
   on(getFlickrImagesSuccessAction, (state, { data }) => ({
     ...state,
-    data: [...state.data, ...data],
+    data: [...data],
     error: null,
     status: 'success'
   })),
