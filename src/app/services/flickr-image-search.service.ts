@@ -14,7 +14,6 @@ export class FlickrImageSearchService {
   constructor(private http: HttpClient, private store: Store) {}
 
   searchKeyword(keyword: string, count: number) {
-    console.log('value this is from search keyword function ----->', count);
 
     const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${environment.flickr.key}&tags=${keyword}&format=json&nojsoncallback=1&page${count}&per_page=10`;
 
