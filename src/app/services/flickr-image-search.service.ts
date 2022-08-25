@@ -10,13 +10,13 @@ import { getFlickrImagesAction, stopLoadingAction } from '../state/flickr-search
   providedIn: 'root',
 })
 export class FlickrImageSearchService {
-
+  count: number = 1;
   constructor(private http: HttpClient, private store: Store) {}
 
-  searchKeyword(keyword: string, count: number) {
+  searchKeyword(keyword: string) {
+    const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${environment.flickr.key}&tags=${keyword}&format=json&nojsoncallback=1&page=${this.count}&per_page=${this.count*100}`;
 
-    const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${environment.flickr.key}&tags=${keyword}&format=json&nojsoncallback=1&page${count}&per_page=10`;
-
+    console.log(`count --- ${this.count}`);
     return this.http.get<FlickrOutput>(url).pipe(
       map((response: FlickrOutput) => {
         const urlarray: any = [];

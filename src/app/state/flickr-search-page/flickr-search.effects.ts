@@ -24,7 +24,7 @@ export class ImageSearchEffects {
       exhaustMap((actions) => {
         // startLoadingAction
         this.store.dispatch(startLoadingAction());
-        return this.flickrImageService.searchKeyword(actions.keyword, actions.pagecount)
+        return this.flickrImageService.searchKeyword(actions.keyword)
         .pipe(
           map((images) => getFlickrImagesSuccessAction({ data: images })),
           catchError(() =>
